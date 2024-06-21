@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "angular": "^1.8.2",
+    "angular": "^1.6.10",
     "angular-route": "^1.8.2"
   }
 }
