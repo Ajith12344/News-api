@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Recipe Details</h1>
+        </div>
+        
+        <div class="navbar">
+            <a href="#/">Home</a>
+            <!-- Add more navigation links if needed -->
+        </div>
+        
+        <div class="recipe-details">
+            <h2>{{ recipe.title }}</h2>
+            <p>Ingredients:</p>
+            <ul>
+                <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient }}</li>
+            </ul>
+            <!-- Add more details as per your API response -->
+        </div>
+        
+        <div class="footer">
+            &copy; 2024 Recipe Website. All rights reserved.
+        </div>
+    </div>
+    
+    
+</body>
+</html>
