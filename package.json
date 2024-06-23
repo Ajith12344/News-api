@@ -1,6 +1,17 @@
 {
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "A simple AngularJS News application",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p $PORT",
+    "build": "echo 'Build step not required for this AngularJS app'"
+  },
   "dependencies": {
-    "angular": "^1.6.10",
-    "angular-route": "^1.8.2"
-  }
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "http-server": "^14.0.0"
+  },
+  "author": "Pratiksha",
+  "license": "MIT"
 }

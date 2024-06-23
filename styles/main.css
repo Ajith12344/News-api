@@ -1,50 +1,182 @@
-/* styles.css */
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Navigation Bar Styles */
+.nav-wrapper {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrapper .brand-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-wrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-wrapper ul li {
+    margin: 0;
+}
+
+.nav-wrapper ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-wrapper ul li a:hover {
+    color: #ffcc00;
+}
+
+/* News Articles Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    animation: fadeIn 2s ease-in-out;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.nav-link, .dropdown-item {
-    transition: color 0.3s ease-in-out;
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.nav-link:hover, .dropdown-item:hover {
-    color: #0056b3;
+.news-block {
+    width: calc(30% - 20px); /* Adjust width as needed */
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Change link color */
 }
 
-.card {
-    border: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
+.news-block:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.card-img-top {
+.news-block img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
-.card-title {
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
+.news-block h2 {
+    font-size: 1.2em;
+    margin: 10px;
 }
 
-.card-text {
+.news-block p {
+    font-size: 1em;
+    color: #555;
+    margin: 0 10px 10px 10px;
+}
+
+/* .news-block .read-more {
+    margin: 10px;
+    text-align: right;
+    color: #00f;
+    text-decoration: underline; /* Underline effect */
+
+
+.brand-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
     font-size: 0.9em;
-    color: #6c757d;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .news-block {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .news-block {
+        flex: 1 1 100%;
+    }
+
+    .nav-wrapper ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-wrapper ul li {
+        text-align: center;
+    }
+}
+
+/* Read more button styles */
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 16px; /* Padding around text */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    text-decoration: none;
+    cursor: pointer;
 }

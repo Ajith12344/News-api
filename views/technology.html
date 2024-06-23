@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top News</title>
+    <title>Technology News</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
@@ -12,8 +12,8 @@
     <script src="/scripts/controllers.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Top News</h1>
+    <div ng-controller="TechnologyController">
+        <h1>Technology News</h1>
         <div class="news-container">
             <div class="news-block" ng-repeat="article in articles">
                 <img ng-src="{{article.urlToImage}}" alt="{{article.title}}">
@@ -23,8 +23,8 @@
             </div>
         </div>
     </div>
-    <!-- <footer>
+    <footer>
         <p>&copy; 2024 Pratiksha</p>
-    </footer> -->
+    </footer>
 </body>
 </html>
